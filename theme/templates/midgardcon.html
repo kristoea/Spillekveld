@@ -1,26 +1,45 @@
-{% load static tailwind_tags %}
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-    <title>MidgardCon 2021</title>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta http-equiv="X-UA-Compatible" content="ie=edge">
-		{% tailwind_css %}
-	</head>
+{% load static bootstrap5 %}
 
-	<body class="bg-red-500 font-serif leading-normal tracking-normal">
-	<div class="h-screen grid place-items-center mx-4 justify-center">
-		<div class="rounded-xl bg-gray-100 mx-auto">
-			<section class="flex items-center text-center text-1xl m-8">
-                <div clas="grid grid-cols-1">
-                    <h1 class="text-3xl md:text-5xl text-center pb-8">MidgardCon 2021</h1>
-					<p><b>Når:</b> 10.-12. september</p>
-					<p class="pb-8"><b>Hvor:</b> Gildehallen, Borre</p>
-                    <p>Mer info kommer...</p>
-                </div>
-			</section>
-		</div>
-		</div>
-	</body>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>MidgardCon 2021</title>
+	{% bootstrap_css %}
+	{% bootstrap_javascript %}
+	<link href="{% static 'css/simple.css' %}" rel="stylesheet">
+    <link rel="shortcut icon" href="{% static 'img/favicon.ico' %}" />
+</head>
+<body>
+<img src="{% static 'img/logo.png' %}" style="max-width: 80%;" class="mx-auto d-block mb-5">
+<div id="carouselIndicators" class="carousel slide" data-bs-ride="carousel">
+  <ol class="carousel-indicators">
+    <li type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Foto 1"></li>
+    <li type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="1" aria-label="Foto 2"></li>
+    <li type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="2" aria-label="Foto 3"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+        <img src="{% static 'img/foto1.jpg' %}" class="d-block w-100" alt="Foto 1">
+    </div>
+    <div class="carousel-item">
+         <img src="{% static 'img/foto2.jpg' %}" class="d-block w-100" alt="Foto 2">
+    </div>
+    <div class="carousel-item">
+      <img src="{% static 'img/foto3.jpg' %}" class="d-block w-100" alt="Foto 3">
+    </div>
+  </div>
+  <a class="carousel-control-prev" type="button" data-bs-target="#carouselIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Forrige</span>
+  </a>
+  <a class="carousel-control-next" type="button" data-bs-target="#carouselIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Neste</span>
+  </a>
+</div>
+<p class="mt-5 text-center"><b>Hvor:</b> Gildehallen, Borre</p>
+<p class="text-center"><b>Når:</b> 10.-12. september</p>
+</body>
 </html>
