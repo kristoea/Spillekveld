@@ -14,3 +14,15 @@ h1,h2,h3{
     font-size:12px;
     text-align:right;
 }
+a:link{
+    color: #EF4444;
+}
+a:visited{
+    color: #F87171;
+}
+a:hover{
+    color: #B91C1C;
+}
+a:active{
+    color: #FCA5A5
+}
