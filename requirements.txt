@@ -10,7 +10,7 @@ colorama==0.4.4; platform_system == 'windows'
 cookiecutter==1.7.3
 django-bootstrap-v5==1.0.4
 django-tailwind==2.0.1
-django==3.2.5
+django==3.2.13
 idna==2.10
 jinja2-time==0.2.0
 jinja2==3.0.1
