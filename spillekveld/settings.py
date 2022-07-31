@@ -146,3 +146,5 @@ STATIC_ROOT = os.environ.get("DJANGO_STATIC_ROOT", "./static/")
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+CSRF_TRUSTED_ORIGINS = ['https://' + host for host in ALLOWED_HOSTS]
