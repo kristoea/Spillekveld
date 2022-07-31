@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get("DEBUG", "FALSE") == "TRUE"
+DEBUG = os.environ.get("DEBUG", False)
 
 ALLOWED_HOSTS = [os.environ.get("HTTP_HOST")]
 
@@ -127,15 +127,9 @@ STATIC_ROOT = os.environ.get("DJANGO_STATIC_ROOT", "./static/")
 
 # Whitenoise settings
 
-STATICFILES_STORAGE = ('whitenoise.storage.CompressedManifestStaticFilesStorage')
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
-# From Django Tailwind tutorial
-
-INTERNAL_IPS = [
-    "127.0.0.1",
-]
