@@ -4,11 +4,11 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-django = "==3.2.*"
+django = "*"
 whitenoise = "*"
 "django-bootstrap-v5" = "*"
 
 [dev-packages]
 
 [requires]
-python_version = "3.7"
+python_version = "3.9"
