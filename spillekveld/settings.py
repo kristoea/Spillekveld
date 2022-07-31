@@ -78,12 +78,25 @@ WSGI_APPLICATION = 'spillekveld.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+if DEBUG:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / 'db.sqlite3',
+        }
     }
-}
+else:
+    # Configure Postgres database for local development
+    #   Set these environment variables in the .env file for this project.
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql',
+            'NAME': os.environ['DBNAME'],
+            'HOST': os.environ['DBHOST'],
+            'USER': os.environ['DBUSER'],
+            'PASSWORD': os.environ['DBPASS']
+        }
+    }
 
 
 # Password validation
