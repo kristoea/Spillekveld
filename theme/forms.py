@@ -17,6 +17,13 @@ def validate_code(value):
         )
 
 
+def check_checkbox(value):
+    if not value:
+        raise ValidationError(
+            _('Du har ikke godtatt at dine personopplysninger behandles'),
+        )
+
+
 class NewUserForm(UserCreationForm):
     username = forms.RegexField(label=_("Email"), max_length=150,
                                 regex=r'^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$',
@@ -43,11 +50,18 @@ class NewUserForm(UserCreationForm):
         required=True,
     )
 
+    checkbox_terms = forms.BooleanField(
+        label=_(""),
+        help_text=_("Jeg godtar at mine personopplysninger ovenfor behandles i sammenheng med organisering av MidgardCon 2022."),
+        required=True,
+    )
+
     register_code.validators.append(validate_code)
+    checkbox_terms.validators.append(check_checkbox)
 
     class Meta:
         model = User
-        fields = ("username", "first_name", "last_name", "password1", "password2", "register_code")
+        fields = ("username", "first_name", "last_name", "password1", "password2", "register_code", "checkbox_terms")
         labels = {
             'first_name': 'Fornavn',
             'last_name': 'Etternavn',
