@@ -6,27 +6,25 @@
 
 {% block content %}
 
-<a href="/midgardcon/"><img src="{% static 'img/logo2022.png' %}" style="max-width: 80%;" class="mx-auto d-block mb-5"></a>
-
 <h1>Program</h1>
 <h2>Fredag, 30. september</h2>
 <ul>
   <li>Rollespill</li>
   <ul>
 	  {% for e in friday_rp %}
-        <li>{{ e.name }}, {{ e.start_time|date:"H:i" }} - {{ e.end_time|date:"H:i" }}, {{e.location}}</li>
+        {% include 'event_snippet.html' with e=e %}
 	  {% endfor %}
   </ul>
   <li>Brettspill</li>
   <ul>
 	  {% for e in friday_bg %}
-        <li>{{ e.name }}, {{ e.start_time|date:"H:i" }} - {{ e.end_time|date:"H:i" }}, {{e.location}}</li>
+        {% include 'event_snippet.html' with e=e %}
 	  {% endfor %}
   </ul>
   <li>Annet</li>
   <ul>
 	  {% for e in friday_na %}
-        <li>{{ e.name }}, {{ e.start_time|date:"H:i" }} - {{ e.end_time|date:"H:i" }}, {{e.location}}</li>
+        {% include 'event_snippet.html' with e=e %}
 	  {% endfor %}
   </ul>
 </ul>
@@ -35,19 +33,19 @@
   <li>Rollespill</li>
   <ul>
 	  {% for e in saturday_rp %}
-        <li>{{ e.name }}, {{ e.start_time|date:"H:i" }} - {{ e.end_time|date:"H:i" }}, {{e.location}}</li>
+        {% include 'event_snippet.html' with e=e %}
 	  {% endfor %}
   </ul>
   <li>Brettspill</li>
   <ul>
 	  {% for e in saturday_bg %}
-        <li>{{ e.name }}, {{ e.start_time|date:"H:i" }} - {{ e.end_time|date:"H:i" }}, {{e.location}}</li>
+        {% include 'event_snippet.html' with e=e %}
 	  {% endfor %}
   </ul>
   <li>Annet</li>
   <ul>
 	  {% for e in saturday_na %}
-        <li>{{ e.name }}, {{ e.start_time|date:"H:i" }} - {{ e.end_time|date:"H:i" }}, {{e.location}}</li>
+        {% include 'event_snippet.html' with e=e %}
 	  {% endfor %}
   </ul>
 </ul>
@@ -56,19 +54,19 @@
 <li>Rollespill</li>
   <ul>
 	  {% for e in sunday_rp %}
-        <li>{{ e.name }}, {{ e.start_time|date:"H:i" }} - {{ e.end_time|date:"H:i" }}, {{e.location}}</li>
+        {% include 'event_snippet.html' with e=e %}
 	  {% endfor %}
   </ul>
   <li>Brettspill</li>
   <ul>
 	  {% for e in sunday_bg %}
-        <li>{{ e.name }}, {{ e.start_time|date:"H:i" }} - {{ e.end_time|date:"H:i" }}, {{e.location}}</li>
+        {% include 'event_snippet.html' with e=e %}
 	  {% endfor %}
   </ul>
   <li>Annet</li>
   <ul>
 	  {% for e in sunday_na %}
-        <li>{{ e.name }}, {{ e.start_time|date:"H:i" }} - {{ e.end_time|date:"H:i" }}, {{e.location}}</li>
+        {% include 'event_snippet.html' with e=e %}
 	  {% endfor %}
   </ul>
 </ul>

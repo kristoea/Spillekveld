@@ -1,0 +1,1 @@
+<li>{{ e.name }}, {{ e.start_time|date:"H:i" }} - {{ e.end_time|date:"H:i" }}, {{e.location}}, <a href="{% url 'event-detail' e.slug %}">detaljer og påmelding<a></a></li>

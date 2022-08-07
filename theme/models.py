@@ -1,4 +1,6 @@
 from django.db import models
+from django.template.defaultfilters import slugify
+from django.contrib.auth.models import User
 
 
 class Organizer(models.Model):
@@ -29,6 +31,8 @@ class Event(models.Model):
     location = models.CharField(max_length=30, verbose_name="plassering", blank=True)
     description = models.TextField(blank=True)
 
+    slug = models.SlugField(blank=True)
+
     class Meta:
         verbose_name = "arrangement"
         verbose_name_plural = "arrangementer"
@@ -36,3 +40,25 @@ class Event(models.Model):
 
     def __str__(self):
         return self.name + ", " + self.start_time.strftime("%a %H:%M")
+
+    def save(self, *args, **kwargs):
+        self.slug = slugify(self)
+        super(Event, self).save(*args, **kwargs)
+
+
+class Signup(models.Model):
+    event = models.ForeignKey(to=Event, on_delete=models.CASCADE)
+    user = models.ForeignKey(to=User, on_delete=models.CASCADE)
+    on_wait = models.BooleanField(default=False)
+    time = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        verbose_name = "påmelding"
+        verbose_name_plural = "påmeldinger"
+        ordering = ["event", "time"]
+
+    def __str__(self):
+        name = str(self.event) + ", " + str(self.user)
+        if self.on_wait:
+            name += ", venteliste"
+        return name

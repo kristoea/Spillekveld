@@ -1,0 +1,65 @@
+{% extends 'midgardcon_base.html' %}
+
+{% load static %}
+{% load i18n %}
+
+{% block title %} - Program{% endblock %}
+
+{% block content %}
+{% language 'nb' %}
+
+<h1>{{ object.name }}</h1>
+<b>Tid:</b> {{ object.start_time|date:"H:i" }} - {{ object.end_time|date:"H:i" }}, {{ object.start_time|date:"l" }}
+<br>
+<b>Passering:</b> {{object.location}}
+{% if object.contact %}
+<br>
+<b>Kontaktperson:</b> {{object.contact}}
+{% endif %}
+{% if object.description %}
+<br>
+{{object.description }}
+{% endif %}
+<hr>
+<b>Påmeldte:</b> {{ num_signed_up }} av {{ object.max_players }}
+{% if is_signed_up %}
+<br>
+Du er påmeldt
+<a class="btn btn-danger btn-lg d-block mx-auto my-3" href="{% url 'event-signoff' object.slug %}" style="color:white">Meld meg av</a>
+{% endif %}
+{% if is_on_wait %}
+<br>
+Du er på ventelisten
+<a class="btn btn-warning btn-lg d-block mx-auto my-3" href="{% url 'event-signoff' object.slug %}" style="color:white">Meld meg av</a>
+{% endif %}
+{% if can_sign_up %}
+<br>
+    {% if user.is_authenticated %}
+    <a class="btn btn-success btn-lg d-block mx-auto my-3" href="{% url 'event-signup' object.slug %}" style="color:white">Meld meg på</a>
+    {% else %}
+    <a href="{% url 'logginn'%}">Logg inn</a> for å melde deg på og se påmeldte.
+    {% endif %}
+{% endif %}
+
+{% if user.is_authenticated %}
+{% if signed_up %}
+<h3>Påmeldte</h3>
+<ul>
+{% for s in signed_up %}
+    <li>{{s.first_name}} {{s.last_name}}</li>
+{% endfor %}
+</ul>
+{% endif %}
+{% if waiting %}
+<h3>På venteliste</h3>
+<ul>
+{% for s in waiting %}
+    <li>{{s.first_name}} {{s.last_name}}</li>
+{% endfor %}
+</ul>
+{% endif %}
+{% endif %}
+
+{% endlanguage %}
+
+{% endblock %}
