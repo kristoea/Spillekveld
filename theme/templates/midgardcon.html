@@ -1,18 +1,9 @@
-{% load static bootstrap5 %}
+{% extends 'midgardcon_base.html' %}
 
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>MidgardCon 2022</title>
-	{% bootstrap_css %}
-	{% bootstrap_javascript %}
-	<link href="{% static 'css/simple.css' %}" rel="stylesheet">
-    <link rel="shortcut icon" href="{% static 'img/favicon.ico' %}" />
-</head>
-<body>
-        {% include 'bootstrap5/messages.html' %}
+{% load static %}
+
+{% block content %}
+
 <img src="{% static 'img/logo2022.png' %}" style="max-width: 80%;" class="mx-auto d-block mb-5">
 <div id="carouselIndicators" class="carousel slide" data-bs-ride="carousel">
   <ol class="carousel-indicators">
@@ -133,6 +124,4 @@
   </div>
 </div>
 
-
-</body>
-</html>
+{% endblock %}

@@ -1,19 +1,11 @@
+{% extends 'midgardcon_base.html' %}
+
 {% load static bootstrap5 %}
 {% load crispy_forms_tags %}
 
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>MidgardCon 2021 - Logg inn</title>
-	{% bootstrap_css %}
-	{% bootstrap_javascript %}
-	<link href="{% static 'css/simple.css' %}" rel="stylesheet">
-    <link rel="shortcut icon" href="{% static 'img/favicon.ico' %}" />
-</head>
-<body>
-        {% include 'bootstrap5/messages.html' %}
+{% block title %} - Logg inn{% endblock %}
+
+{% block content %}
 <!--Register-->
 <div class="container py-5">
   <h1>Logg inn</h1>
@@ -22,7 +14,7 @@
     {{ login_form|crispy }}
     <button class="btn btn-primary" type="submit">Logg inn</button>
   </form>
-  <p class="text-center">Ikke registrert? <a href="/register">Lag en bruker</a>.</p>
+  <p class="text-center">Ikke registrert? <a href="{% url 'registrer'%}">Lag en bruker</a>.</p>
 </div>
-</body>
-</html>
+
+{% endblock %}

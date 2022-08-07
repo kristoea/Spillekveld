@@ -1,0 +1,30 @@
+{% load static bootstrap5 %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>MidgardCon 2022{% block title %}{% endblock title %}</title>
+	{% bootstrap_css %}
+	{% bootstrap_javascript %}
+	<link href="{% static 'css/simple.css' %}" rel="stylesheet">
+    <link rel="shortcut icon" href="{% static 'img/favicon.ico' %}" />
+    {% block header %}
+    {% endblock %}
+</head>
+<body>
+    {% include 'bootstrap5/messages.html' %}
+    <div class="text-end">
+    {% if user.is_authenticated %}
+        <small>Logget inn som {{ user.first_name}} {{ user.last_name}} | <a href="{% url 'loggut'%}">Logg ut</a></small>
+    {% else %}
+        <small><a href="{% url 'logginn'%}">Logg inn</a></small>
+    {% endif %}
+    </div>
+    <hr>
+
+    {% block content %}
+    {% endblock %}
+</body>
+</html>

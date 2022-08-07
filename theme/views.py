@@ -2,7 +2,7 @@ import pdb
 
 from django.views.generic import TemplateView
 from django.shortcuts import render, redirect
-from django.contrib.auth import login, authenticate
+from django.contrib.auth import login, authenticate, logout
 from django.contrib import messages
 from django.contrib.auth.forms import AuthenticationForm
 
@@ -38,7 +38,7 @@ def register_request(request):
             user = form.save()
             login(request, user)
             messages.success(request, "Registrering fullført.")
-            return redirect("/midgardcon")
+            return redirect("midgardcon")
         messages.error(request, "Registrering feilet. Sjekk felt.")
         for e in form.errors:
             for msg in form.errors[e]:
@@ -57,10 +57,16 @@ def login_request(request):
             if user is not None:
                 login(request, user)
                 messages.info(request, f"Du er logget inn som {username}.")
-                return redirect("/midgardcon")
+                return redirect("midgardcon")
             else:
                 messages.error(request, "Feil brukernavn eller passord.")
         else:
             messages.error(request, "Feil brukernavn eller passord.")
     form = AuthenticationForm()
     return render(request=request, template_name="logginn.html", context={"login_form": form})
+
+
+def logout_request(request):
+    logout(request)
+    messages.info(request, "Du har logget ut.")
+    return redirect("midgardcon")

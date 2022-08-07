@@ -1,18 +1,11 @@
-{% load static bootstrap5 %}
+{% extends 'midgardcon_base.html' %}
 
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>MidgardCon 2021 - Program</title>
-	{% bootstrap_css %}
-	{% bootstrap_javascript %}
-	<link href="{% static 'css/simple.css' %}" rel="stylesheet">
-    <link rel="shortcut icon" href="{% static 'img/favicon.ico' %}" />
-</head>
-<body>
-        {% include 'bootstrap5/messages.html' %}
+{% load static %}
+
+{% block title %} - Program{% endblock %}
+
+{% block content %}
+
 <a href="/midgardcon/"><img src="{% static 'img/logo2022.png' %}" style="max-width: 80%;" class="mx-auto d-block mb-5"></a>
 
 <h1>Program</h1>
@@ -79,5 +72,5 @@
 	  {% endfor %}
   </ul>
 </ul>
-</body>
-</html>
+
+{% endblock %}
