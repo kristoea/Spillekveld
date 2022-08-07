@@ -17,11 +17,13 @@ from django.contrib import admin
 from django.urls import path
 from django.views.generic import TemplateView
 
-from theme.views import ProgramView
+from theme.views import ProgramView, register_request, login_request
 
 urlpatterns = [
     path('', TemplateView.as_view(template_name="base.html")),
     path('midgardcon/', TemplateView.as_view(template_name="midgardcon.html")),
     path('midgardcon/program/', ProgramView.as_view(template_name="midgardconprog.html")),
     path('admin/', admin.site.urls),
+    path("midgardcon/registrer/", register_request, name="registrer"),
+    path("midgardcon/logginn/", login_request, name="logginn"),
 ]
