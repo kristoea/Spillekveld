@@ -33,6 +33,10 @@ class Event(models.Model):
 
     slug = models.SlugField(blank=True)
 
+    @property
+    def num_signed_up(self):
+        return Signup.objects.filter(event=self).count()
+
     class Meta:
         verbose_name = "arrangement"
         verbose_name_plural = "arrangementer"
