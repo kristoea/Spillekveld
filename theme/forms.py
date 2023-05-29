@@ -52,7 +52,7 @@ class NewUserForm(UserCreationForm):
 
     checkbox_terms = forms.BooleanField(
         label=_(""),
-        help_text=_("Jeg godtar at mine personopplysninger ovenfor behandles i sammenheng med organisering av MidgardCon 2022."),
+        help_text=_("Jeg godtar at mine personopplysninger ovenfor behandles i sammenheng med organisering av MidgardCon 2023."),
         required=True,
     )
 
