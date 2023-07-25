@@ -3,7 +3,7 @@ arrow==1.1.1
 asgiref==3.7.2
 beautifulsoup4==4.12.2
 binaryornot==0.4.4
-certifi==2021.5.30
+certifi==2023.7.22
 chardet==4.0.0
 click==8.0.1
 cookiecutter==1.7.3
