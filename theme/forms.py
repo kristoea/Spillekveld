@@ -46,7 +46,7 @@ class NewUserForm(UserCreationForm):
 
     register_code = forms.CharField(
         label=_("Kode fra billettkjøp"),
-        help_text=_("Sjekk epost fra TicketCo."),
+        help_text=_("Sjekk epost fra TicketCo. NB: ikke \"referansekode\"."),
         required=True,
     )
 
