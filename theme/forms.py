@@ -26,7 +26,7 @@ def check_checkbox(value):
 
 class NewUserForm(UserCreationForm):
     username = forms.RegexField(label=_("Email"), max_length=150,
-                                regex=r'^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$',
+                                regex=r'^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w+)+$',
                                 help_text=_("Fungerer som brukernavn. Bokstaver, tall og @/./+/-/_ tegn."),
                                 error_messages={'invalid': _(
                                     "Må være en gyldig epostadresse, med bokstaver, tall og @/./+/-/_ tegn.")})
@@ -52,7 +52,7 @@ class NewUserForm(UserCreationForm):
 
     checkbox_terms = forms.BooleanField(
         label=_(""),
-        help_text=_("Jeg godtar at mine personopplysninger ovenfor behandles i sammenheng med organisering av MidgardCon 2023."),
+        help_text=_("Jeg godtar at mine personopplysninger ovenfor behandles i sammenheng med organisering av MidgardCon 2024."),
         required=True,
     )
 
