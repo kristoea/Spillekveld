@@ -5,78 +5,81 @@
 {% block content %}
 
 <div id="carouselIndicators" class="carousel slide" data-bs-ride="carousel">
-  <ol class="carousel-indicators">
-    <li type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Foto 1"></li>
-    <li type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="1" aria-label="Foto 2"></li>
-    <li type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="2" aria-label="Foto 3"></li>
-  </ol>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-        <img src="{% static 'img/foto1.jpg' %}" class="d-block w-100" alt="Foto 1">
+    <ol class="carousel-indicators">
+        <li type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Foto 1"></li>
+        <li type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="1" aria-label="Foto 2"></li>
+        <li type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="2" aria-label="Foto 3"></li>
+    </ol>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="{% static 'img/foto1.jpg' %}" class="d-block w-100" alt="Foto 1">
+        </div>
+        <div class="carousel-item">
+            <img src="{% static 'img/foto2.jpg' %}" class="d-block w-100" alt="Foto 2">
+        </div>
+        <div class="carousel-item">
+            <img src="{% static 'img/foto3.jpg' %}" class="d-block w-100" alt="Foto 3">
+        </div>
     </div>
-    <div class="carousel-item">
-        <img src="{% static 'img/foto2.jpg' %}" class="d-block w-100" alt="Foto 2">
-    </div>
-    <div class="carousel-item">
-        <img src="{% static 'img/foto3.jpg' %}" class="d-block w-100" alt="Foto 3">
-    </div>
-  </div>
-  <a class="carousel-control-prev" type="button" data-bs-target="#carouselIndicators" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Forrige</span>
-  </a>
-  <a class="carousel-control-next" type="button" data-bs-target="#carouselIndicators" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Neste</span>
-  </a>
+    <a class="carousel-control-prev" type="button" data-bs-target="#carouselIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Forrige</span>
+    </a>
+    <a class="carousel-control-next" type="button" data-bs-target="#carouselIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Neste</span>
+    </a>
 </div>
 
 <p class="mt-5 text-center"><b>Hvor:</b> Gildehallen, Borre</p>
-<p class="text-center"><b>Når:</b> 30. august - 1. september</p>
+<p class="text-center"><b>Når:</b> 29. august - 31. august </p>
 
-<a class="btn btn-secondary btn-lg d-block mx-auto my-3" href="https://midgardvikingsenter.ticketco.events/no/nb/e/midgardcon_2024" style="color:white">Kjøp billetter her</a>
+<a class="btn btn-secondary btn-lg d-block mx-auto my-3" href="https://midgardvikingsenter.ticketco.events/no/nb/e/midgardcon_2025" style="color:white">Kjøp billetter her</a>
 
 <div style="font-size:20px; text-justify:inter-word">
-  <p>Liker du brettspill eller rollespill? Delta på MidgardCon og spill favorittspillet ditt i historiske omgivelser!</p>
-  <p>Velkommen til et spillcon utenom det vanlige! Drager, magi, alver, trollmenn - og ikke minst vikinger - venter på deg når MidgardCon går av stabelen i Gildehallen! Spill brettspill, rollespill og test dine evner i den årlige duellen med lateksverd på ekte Holmgangsvis! Bli med på en opplevelseshelg som gjennomføres i autentiske vikingomgivelser med levende ild og matserving.</p>
-  <p>Ta med egne brettspill og møt andre spillentusiaster. Vi oppfordrer alle til å slå seg ned ved bordene og spille sammen på en formiddabel spillhelg i Gildehallen!</p>
-  <p>MidgardCon er et samarbeid mellom <i><a href="https://vestfoldmuseene.no/midgard-vikingsenter/">Midgard vikingsenter</a></i> og <i><a href="https://www.facebook.com/groups/175323049161024/">Horten spillkveld&nbsp;:)</a></i></p>
+    <p>Liker du brettspill eller rollespill? Delta på MidgardCon og spill favorittspillet ditt i historiske omgivelser!</p>
+    <p>Velkommen til et spillcon utenom det vanlige! Drager, magi, alver, trollmenn - og ikke minst vikinger - venter på deg når MidgardCon går av stabelen i Gildehallen! Spill brettspill, rollespill og test dine evner i den årlige duellen med lateksverd på ekte Holmgangsvis! Bli med på en opplevelseshelg som gjennomføres i autentiske vikingomgivelser med levende ild og matserving.</p>
+    <p>Ta med egne brettspill og møt andre spillentusiaster. Vi oppfordrer alle til å slå seg ned ved bordene og spille sammen på en formiddabel spillhelg i Gildehallen!</p>
+    <p>MidgardCon er et samarbeid mellom <i><a href="https://vestfoldmuseene.no/midgard-vikingsenter/">Midgard vikingsenter</a></i> og <i><a href="https://www.facebook.com/groups/175323049161024/">Horten spillkveld&nbsp;:)</a></i></p>
 </div>
 
 <hr>
-
-<a class="btn btn-secondary btn-lg d-block mx-auto my-3" style="color:white" href="{% url 'program' %}">Program og påmelding</a>
+<p>Lenken under leder dere til det foreløpige programmet for MidgardCon 2025. Påmelding på enkeltaktiviteter åpnes 1. august. Deretter blir det førstemann til mølla for å få plass på aktivitetene.</p>
+<a class="btn btn-secondary btn-lg d-block mx-auto my-3" style="color:white" href="{% url 'program' %}">Program</a> <!-- og påmelding -->
 <!--<a class="btn btn-secondary btn-lg d-block mx-auto my-3" href="https://forms.gle/vCWDamTdZGXdNQNH6" style="color:white">Bestill eksklusiv MidgardCon T-skjorte</a>-->
 
 <hr class="my-5">
 
 <div class="container" style="font-size:20p;">
-  <div class="row">
-    <div class="col-md mb-2">
-      <a href="https://www.facebook.com/events/291326237087637" class="footer">
-      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
-        <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
-      </svg>
-      Facebook-event</a>
+    <div class="row">
+        <div class="col-md mb-2">
+            <a href="https://fb.me/e/6PrqVlqeb" class="footer">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                    <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
+                </svg>
+                Facebook-event
+            </a>
+        </div>
+        <div class="col-md mb-2">
+            <a href="https://g.page/midgardvikingsenter?share" class="footer">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pin-map-fill" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M3.1 11.2a.5.5 0 0 1 .4-.2H6a.5.5 0 0 1 0 1H3.75L1.5 15h13l-2.25-3H10a.5.5 0 0 1 0-1h2.5a.5.5 0 0 1 .4.2l3 4a.5.5 0 0 1-.4.8H.5a.5.5 0 0 1-.4-.8l3-4z" />
+                    <path fill-rule="evenodd" d="M4 4a4 4 0 1 1 4.5 3.969V13.5a.5.5 0 0 1-1 0V7.97A4 4 0 0 1 4 3.999z" />
+                </svg>
+                Veibeskrivelse
+            </a>
+        </div>
+        <div class="col-md mb-2">
+            <a href="https://www.facebook.com/groups/221978071603206" class="footer">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-people-fill" viewBox="0 0 16 16">
+                    <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                    <path fill-rule="evenodd" d="M5.216 14A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216z" />
+                    <path d="M4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z" />
+                </svg>
+                Facebook-gruppe
+            </a>
+        </div>
     </div>
-    <div class="col-md mb-2">
-      <a href="https://g.page/midgardvikingsenter?share" class="footer">
-      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pin-map-fill" viewBox="0 0 16 16">
-        <path fill-rule="evenodd" d="M3.1 11.2a.5.5 0 0 1 .4-.2H6a.5.5 0 0 1 0 1H3.75L1.5 15h13l-2.25-3H10a.5.5 0 0 1 0-1h2.5a.5.5 0 0 1 .4.2l3 4a.5.5 0 0 1-.4.8H.5a.5.5 0 0 1-.4-.8l3-4z"/>
-        <path fill-rule="evenodd" d="M4 4a4 4 0 1 1 4.5 3.969V13.5a.5.5 0 0 1-1 0V7.97A4 4 0 0 1 4 3.999z"/>
-      </svg>
-      Veibeskrivelse</a>
-    </div>
-    <div class="col-md mb-2">
-      <a href="https://www.facebook.com/groups/221978071603206" class="footer">
-      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-people-fill" viewBox="0 0 16 16">
-        <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
-        <path fill-rule="evenodd" d="M5.216 14A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216z"/>
-        <path d="M4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z"/>
-      </svg>
-      Facebook-gruppe</a>
-    </div>
-  </div>
 </div>
 
 <hr>
@@ -85,61 +88,87 @@
 
 <hr>-->
 
+
+<h1>
+    MidgardConish
+</h1>
+
+<p>
+    Er det for deg som for oss at bare et MidgardCon i året ikke er nok? Bli da med på vårt vesle spillvorspiel, MidgardConish!
+    <a class="btn btn-secondary btn-lg d-block mx-auto my-3" href="https://midgardvikingsenter.ticketco.events/no/nb/e/midgardconish" style="color:white">Kjøp billetter her</a>
+</p>
+<p class="mt-5 text-center"><b>Hvor:</b> Gildehallen, Borre</p>
+<p class="text-center"><b>Når:</b> 24. mai 2025 </p>
+
+<div class="container" style="font-size:20p;">
+    <div class="row">
+        <div class="col-md mb-2">
+            <a href="https://www.facebook.com/events/547606404550938" class="footer">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                    <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
+                </svg>
+                Facebook-event
+            </a>
+        </div>
+    </div>
+</div>
+
+<hr>
 <h2 class="my-5">Våre sponsorer</h2>
 
 <div class="container">
-  <div class="row">
-    <div class="col-md mb-4">
-      <a href="https://www.xn--vennerd-v1a.no/">
-        <img src="{% static 'img/vennerod.png' %}" class="d-block w-100">
-      </a>
+    <div class="row">
+        <div class="col-md mb-4">
+            <a href="https://www.xn--vennerd-v1a.no/">
+                <img src="{% static 'img/vennerod.png' %}" class="d-block w-100">
+            </a>
+        </div>
+        <div class="col-md mb-4">
+            <a href="https://www.hans-im-glueck.de/">
+                <img src="{% static 'img/hansimglueck.svg' %}" class="d-block w-100">
+            </a>
+        </div>
+        <div class="col-md mb-4">
+            <a href="https://www.xn--spilbrt-rxa.dk/no/">
+                <img src="{% static 'img/brettspill.png' %}" class="d-block w-100">
+            </a>
+        </div>
     </div>
-    <div class="col-md mb-4">
-      <a href="https://www.hans-im-glueck.de/">
-          <img src="{% static 'img/hansimglueck.svg' %}" class="d-block w-100">
-      </a>
-    </div>
-    <div class="col-md mb-4">
-      <a href="https://www.xn--spilbrt-rxa.dk/no/">
-          <img src="{% static 'img/brettspill.png' %}" class="d-block w-100">
-      </a>
-    </div>
-  </div>
 
-  <div class="row">
-    <div class="col-md mb-4">
-      <a href="https://asmodeenordics.com/">
-        <img src="{% static 'img/asmodee.svg' %}" class="d-block w-100">
-      </a>
+    <div class="row">
+        <div class="col-md mb-4">
+            <a href="https://asmodeenordics.com/">
+                <img src="{% static 'img/asmodee.svg' %}" class="d-block w-100">
+            </a>
+        </div>
+        <div class="col-md mb-4">
+            <a href="https://www.facebook.com/spellslingersas/">
+                <img src="{% static 'img/spellslingers.png' %}" class="d-block w-100">
+            </a>
+        </div>
+        <div class="col-md mb-4">
+            <a href="https://freeleaguepublishing.com/">
+                <img src="{% static 'img/freeleague.png' %}" class="d-block w-100">
+            </a>
+        </div>
     </div>
-    <div class="col-md mb-4">
-      <a href="https://www.facebook.com/spellslingersas/">
-        <img src="{% static 'img/spellslingers.png' %}" class="d-block w-100">
-      </a>
-    </div>
-    <div class="col-md mb-4">
-      <a href="https://freeleaguepublishing.com/">
-        <img src="{% static 'img/freeleague.png' %}" class="d-block w-100">
-      </a>
-    </div>
-  </div>
 
-  <div class="row">
-    <div class="col-md mb-4">
-      <a href="https://www.manaheim.no/">
-          <img src="{% static 'img/manaheim.png' %}" class="d-block w-100">
-      </a>
+    <div class="row">
+        <div class="col-md mb-4">
+            <a href="https://www.manaheim.no/">
+                <img src="{% static 'img/manaheim.png' %}" class="d-block w-100">
+            </a>
+        </div>
+        <div class="col-md mb-4">
+            <a href="https://www.outland.no/">
+                <img src="{% static 'img/outland.png' %}" class="d-block w-100">
+            </a>
+        </div>
+        <div class="col-md mb-4">
+            &nbsp;
+        </div>
     </div>
-    <div class="col-md mb-4">
-      <a href="https://www.outland.no/">
-          <img src="{% static 'img/outland.png' %}" class="d-block w-100">
-      </a>
-    </div>
-    <div class="col-md mb-4">
-      &nbsp;
-    </div>
-  </div>
 
 </div>
 
-{% endblock %}
+    {% endblock %}
