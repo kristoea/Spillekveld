@@ -22,7 +22,7 @@ from theme.views import ProgramView, register_request, login_request, logout_req
 urlpatterns = [
     path('', TemplateView.as_view(template_name="base.html")),
     path('midgardcon/', TemplateView.as_view(template_name="midgardcon.html"), name="midgardcon"),
-    path('midgardcon/midgardconprogram/', ProgramView.as_view(template_name="midgardconprog.html"), name="program"),
+    path('midgardcon/midgardconprogram/', ProgramView.as_view(template_name="midgardconprog.html"), name="midgardconprogram"),
     path('midgardcon/program/', ProgramView.as_view(template_name="midgardconishprog.html"), name="program"),
     path('admin/', admin.site.urls),
     path("midgardcon/registrer/", register_request, name="registrer"),
