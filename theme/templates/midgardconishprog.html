@@ -12,19 +12,31 @@
     <li>Rollespill</li>
     <ul>
         {% for e in saturday_rp %}
-        {% include 'event_snippet.html' with e=e %}
+            {% if e.name == "Pause" %}
+------------------------------Pause------------------------------
+            {% else %}
+            {% include 'event_snippet.html' with e=e %}
+            {% endif %}
         {% endfor %}
     </ul>
     <li>Brettspill</li>
     <ul>
         {% for e in saturday_bg %}
-        {% include 'event_snippet.html' with e=e %}
+            {% if e.name == "Pause" %}
+------------------------------Pause------------------------------
+            {% else %}
+            {% include 'event_snippet.html' with e=e %}
+            {% endif %}
         {% endfor %}
     </ul>
     <li>Annet</li>
     <ul>
         {% for e in saturday_na %}
-        {% include 'event_snippet.html' with e=e %}
+            {% if e.name == "Pause" %}
+------------------------------Pause------------------------------
+            {% else %}
+            {% include 'event_snippet.html' with e=e %}
+            {% endif %}
         {% endfor %}
     </ul>
 </ul>
