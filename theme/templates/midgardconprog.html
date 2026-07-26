@@ -5,77 +5,110 @@
 {% block title %} - Program{% endblock %}
 
 {% block content %}
-Gleder oss til å se dere på gildehallen igjen 28-30 august 2026.
-
-Detaljene planlegges.
 <!--<a><img src="{% static 'img/promoposter2025.jpg' %}" style="max-width: 80%;" class="mx-auto d-block mb-5"></a>-->
-<!--<p>OBS: Med mindre det er påmelding til venteliste, så vil doble påmeldinger i samme pulje avmeldes (Påmeldinger til ulike aktiviteter i samme pulje, med samme bruker).</p>
+<p>OBS: Med mindre det er påmelding til venteliste, så vil doble påmeldinger i samme pulje avmeldes (Påmeldinger til ulike aktiviteter i samme pulje, med samme bruker).</p>
 
-<i><a href="{% url 'skrivekonkurranse' %}">Modul skrivekonkurranse</a></i>, frist 22.08.2025
+<!--<i><a href="{% url 'skrivekonkurranse' %}">Modul skrivekonkurranse</a></i>, frist 22.08.2025-->
 <h1>Program</h1>
-<h2>Fredag, 29. august</h2>
+<h2>Fredag, 28. august</h2>
 <ul>
     <li>Rollespill</li>
     <ul>
         {% for e in friday_rp %}
+        {% if e.name == "Pause" %}
+<br>------------------------------Pause------------------------------
+        {% else %}
         {% include 'event_snippet.html' with e=e %}
+        {% endif %}
         {% endfor %}
     </ul>
     <li>Brettspill</li>
     <ul>
         {% for e in friday_bg %}
+        {% if e.name == "Pause" %}
+<br>------------------------------Pause------------------------------
+        {% else %}
         {% include 'event_snippet.html' with e=e %}
+        {% endif %}
         {% endfor %}
     </ul>
     <li>Annet</li>
     <ul>
         {% for e in friday_na %}
+        {% if e.name == "Pause" %}
+<br>------------------------------Pause------------------------------
+        {% else %}
         {% include 'event_snippet.html' with e=e %}
+        {% endif %}
         {% endfor %}
     </ul>
 </ul>
-<h2>Lørdag, 30. august</h2>
+<h2>Lørdag, 29. august</h2>
 <ul>
     <li>Rollespill</li>
     <ul>
         {% for e in saturday_rp %}
+        {% if e.name == "Pause" %}
+<br>------------------------------Pause------------------------------
+        {% else %}
         {% include 'event_snippet.html' with e=e %}
+        {% endif %}
         {% endfor %}
     </ul>
     <li>Brettspill</li>
     <ul>
         {% for e in saturday_bg %}
+        {% if e.name == "Pause" %}
+<br>------------------------------Pause------------------------------
+        {% else %}
         {% include 'event_snippet.html' with e=e %}
+        {% endif %}
         {% endfor %}
     </ul>
     <li>Annet</li>
     <ul>
         {% for e in saturday_na %}
+        {% if e.name == "Pause" %}
+<br>------------------------------Pause------------------------------
+        {% else %}
         {% include 'event_snippet.html' with e=e %}
+        {% endif %}
         {% endfor %}
     </ul>
 </ul>
-<h2>Søndag, 31. august</h2>
+<h2>Søndag, 30. august</h2>
 <ul>
     <li>Rollespill</li>
     <ul>
         {% for e in sunday_rp %}
+        {% if e.name == "Pause" %}
+<br>------------------------------Pause------------------------------
+        {% else %}
         {% include 'event_snippet.html' with e=e %}
+        {% endif %}
         {% endfor %}
     </ul>
     <li>Brettspill</li>
     <ul>
         {% for e in sunday_bg %}
+        {% if e.name == "Pause" %}
+<br>------------------------------Pause------------------------------
+        {% else %}
         {% include 'event_snippet.html' with e=e %}
+        {% endif %}
         {% endfor %}
     </ul>
     <li>Annet</li>
     <ul>
         {% for e in sunday_na %}
+        {% if e.name == "Pause" %}
+<br>------------------------------Pause------------------------------
+        {% else %}
         {% include 'event_snippet.html' with e=e %}
+        {% endif %}
         {% endfor %}
     </ul>
 </ul>
--->
+
 {% endblock %}
 
