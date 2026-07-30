@@ -18,7 +18,7 @@
 {% endif %}
 {% if object.description %}
 <br>
-{{object.description}}
+{{object.description|linebreaks}}
 {% endif %}
 <hr>
 <b>Påmeldte:</b> {{ num_signed_up }} av {{ object.max_players }}
