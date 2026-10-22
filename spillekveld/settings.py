@@ -50,7 +50,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'theme',
-    "bootstrap5",
+    "django_bootstrap5",
     'crispy_forms',
     "crispy_bootstrap5",
 ]
@@ -152,7 +152,13 @@ STATIC_ROOT = os.environ.get("DJANGO_STATIC_ROOT", "./static/")
 
 # Whitenoise settings
 
-#STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+STORAGES = {
+    # ...
+    "staticfiles": {
+        "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
+    },
+}
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field

@@ -1,4 +1,4 @@
-{% load static bootstrap5 %}
+{% load static django_bootstrap5 %}
 
 <!DOCTYPE html>
 <html>
@@ -14,7 +14,7 @@
     {% endblock %}
 </head>
 <body>
-    {% include 'bootstrap5/messages.html' %}
+    {% include 'django_bootstrap5/messages.html' %}
     <div class="text-end">
     {% if user.is_authenticated %}
         <small>Logget inn som {{ user.first_name}} {{ user.last_name}} | <a href="{% url 'loggut'%}">Logg ut</a></small>
