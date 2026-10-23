@@ -7,7 +7,7 @@ name = "pypi"
 django = "~=5.2.0"
 whitenoise = "*"
 "django-bootstrap5" = "*"
-psycopg2-binary = "*"
+"psycopg[binary]" = "*"
 django-crispy-forms = "*"
 "crispy-bootstrap5" = "*"
 
